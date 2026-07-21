@@ -1,1 +1,195 @@
+Credit Card Customer Segmentation using K-Means Clustering
 
+📌 Project Overview
+
+Customer segmentation enables financial institutions to better understand customer behavior, optimize credit offerings, and deliver personalized marketing strategies. By grouping customers with similar financial characteristics, banks can identify high-value customers, detect underserved segments, and improve credit portfolio management.
+
+This project develops a Credit Card Customer Segmentation model using the K-Means Clustering algorithm. Customers are grouped based on Income Category, Gender, and Credit Limit to generate actionable business insights for targeted marketing, credit limit optimization, and premium product recommendations.
+
+The project demonstrates an end-to-end unsupervised machine learning workflow, including data preprocessing, feature scaling, clustering, visualization, and business interpretation.
+
+🎯 Business Objectives
+Segment customers into distinct groups based on financial characteristics.
+Identify high-value customers eligible for premium credit products.
+Detect underserved customers with high income but relatively low credit limits.
+Support personalized marketing and customer retention strategies.
+Enable data-driven credit line management.
+
+📊 Dataset
+Dataset: Credit Card Customer Dataset
+Features Used
+Gender
+Income Category
+Credit Limit
+
+Additional customer attributes are available in the dataset but were not used in the clustering model.
+
+🛠️ Technologies Used
+Python
+Pandas
+NumPy
+Scikit-learn
+Matplotlib
+📈 Data Preparation
+
+The dataset was prepared before clustering through several preprocessing steps.
+
+Data Cleaning
+Removed unnecessary whitespace from categorical variables.
+Checked for missing values.
+Removed records with missing values in key clustering features.
+Feature Encoding
+
+Categorical variables were converted into ordinal numerical values.
+Gender Encoding
+Gender	Value
+Female	1
+Male	2
+Income Category Encoding
+Income Category	Value
+Less than $40K	1
+$40K – $60K	2
+$60K – $80K	3
+$80K – $120K	4
+$120K+	5
+Unknown	6
+
+⚙️ Feature Scaling
+Since K-Means is distance-based, all selected features were normalized using MinMaxScaler.
+
+Scaled Features:
+Gender
+Income Category
+Credit Limit
+
+This ensures that no single feature dominates the clustering process.
+
+🤖 Customer Segmentation using K-Means
+An unsupervised machine learning model was built using the K-Means Clustering algorithm.
+Model Configuration
+Algorithm: K-Means
+Number of Clusters: 5
+Random State: 42
+
+Each customer was assigned to one of five customer segments.
+
+📊 Segment Profiling
+After clustering, business-oriented segment profiles were generated.
+For each segment, the following KPIs were calculated:
+Number of customers
+Average income level
+Average credit limit
+Average gender distribution
+
+Segments were ranked according to average credit limit to distinguish high-value customer groups.
+
+💼 Business Insights
+The analysis identified two key customer groups:
+
+⭐ High-Value Segments
+Customer groups with average credit limits above the overall portfolio average.
+Potential actions:
+Premium credit cards
+Exclusive rewards
+Wealth management offers
+Loyalty programs
+
+📈 Under-Served Segments
+Customers with:
+High income
+Below-average credit limits
+
+Potential actions:
+
+Credit limit increase
+Personalized financial products
+Upselling premium services
+Targeted retention campaigns
+
+📊 Visualizations
+The project includes multiple visualizations to interpret customer segments.
+Customer Distribution
+Number of customers in each cluster
+Average Credit Limit by Segment
+Comparison of average credit limits across clusters
+3D Customer Segmentation
+
+Interactive-style 3D scatter plot illustrating customer groups using:
+
+Gender
+Income Band
+Credit Limit
+
+📁 Project Structure
+Credit-Card-Customer-Segmentation/
+│
+├── credit.csv
+├── Credit_Card_Customer_Segmentation.ipynb
+├── README.md
+├── images/
+│   ├── customer_segments.png
+│   ├── avg_credit_limit.png
+│   └── clustering_3d.png
+└── requirements.txt
+
+🚀 Machine Learning Workflow
+Credit Card Dataset
+          │
+          ▼
+Data Cleaning
+          │
+          ▼
+Feature Encoding
+          │
+          ▼
+Missing Value Handling
+          │
+          ▼
+Feature Scaling
+          │
+          ▼
+K-Means Clustering
+          │
+          ▼
+Customer Segmentation
+          │
+          ▼
+Business KPI Analysis
+          │
+          ▼
+Business Recommendations
+
+📌 Results
+Successfully segmented customers into five distinct customer groups using K-Means clustering.
+Identified high-value customer segments with above-average credit limits for premium product targeting.
+Detected potential underserved customer groups with higher income but comparatively lower credit limits.
+Developed segment-level business KPIs to support data-driven marketing, customer retention, and credit management strategies.
+Visualized customer clusters using both summary charts and a 3D scatter plot for easier interpretation.
+
+📚 Future Improvements
+Determine the optimal number of clusters using the Elbow Method and Silhouette Score instead of selecting a fixed value.
+Include additional customer features such as age, spending behavior, transaction frequency, utilization ratio, and account tenure.
+Compare K-Means with other clustering algorithms such as Hierarchical Clustering, DBSCAN, and Gaussian Mixture Models.
+Build an interactive customer segmentation dashboard using Power BI or Tableau.
+Deploy the segmentation model as a web application using Streamlit for real-time customer profiling.
+
+👩‍💻 Author
+Swati Lalwani
+Skills Demonstrated
+Customer Segmentation
+Unsupervised Machine Learning
+K-Means Clustering
+Exploratory Data Analysis (EDA)
+Data Cleaning
+Feature Engineering
+Feature Scaling
+MinMaxScaler
+Business Analytics
+Customer Analytics
+Data Visualization
+Cluster Profiling
+Python
+Pandas
+NumPy
+Scikit-learn
+Matplotlib
