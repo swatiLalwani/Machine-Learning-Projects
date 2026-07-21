@@ -1,1 +1,207 @@
+Amazon Alexa Review Sentiment Analysis using Machine Learning
 
+📌 Project Overview
+
+Customer reviews provide valuable insights into user satisfaction and product performance. Automatically classifying reviews as positive or negative helps businesses monitor customer sentiment, improve products, and enhance user experience.
+
+This project develops an NLP-based Sentiment Analysis system using the Amazon Alexa Reviews Dataset. It applies text preprocessing, feature engineering, and multiple machine learning algorithms to classify customer reviews as Positive or Negative. The project follows a complete machine learning pipeline—from exploratory data analysis and text preprocessing to model training, hyperparameter tuning, and evaluation.
+
+🎯 Objectives
+Analyze Amazon Alexa customer reviews.
+Perform exploratory data analysis (EDA).
+Preprocess textual data using NLP techniques.
+Convert text into numerical features using Bag-of-Words.
+Train and compare multiple machine learning models.
+Optimize model performance using Grid Search and Cross Validation.
+Predict customer sentiment from unseen reviews.
+
+📊 Dataset
+Dataset: Amazon Alexa Reviews Dataset
+The dataset contains customer reviews of Amazon Alexa devices along with ratings and sentiment labels.
+
+Features
+Rating
+Verified Reviews
+Feedback (Target Variable)
+Product Variation
+Review Date
+
+Target Variable
+
+Feedback	Sentiment
+0	Negative
+1	Positive
+🛠️ Technologies Used
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+NLTK
+Scikit-learn
+XGBoost
+WordCloud
+Regular Expressions (Regex)
+📈 Exploratory Data Analysis (EDA)
+
+The dataset was explored to understand customer review patterns before model development.
+
+Data Exploration
+Verified dataset dimensions
+Checked data types
+Confirmed there were no missing values
+Created a review length feature
+Statistical Analysis
+
+Performed analysis on:
+
+Rating distribution
+Feedback distribution
+Product variation analysis
+Review length statistics
+Data Visualization
+
+Generated multiple visualizations including:
+
+Rating Distribution Bar Chart
+Feedback Distribution
+Pie Charts
+Review Length Histograms
+Word Clouds
+Product Variation Analysis
+🔍 Key Insights
+No missing values were found in the dataset.
+Approximately 92% of reviews are positive, indicating a class imbalance.
+Reviews with ratings of 1–2 are generally associated with negative feedback, while ratings of 3–5 correspond to positive feedback.
+Product variations received different average ratings.
+Word clouds highlighted commonly used positive and negative terms, providing qualitative insights into customer sentiment.
+
+📝 Text Preprocessing
+To prepare the review text for machine learning, the following NLP preprocessing steps were performed:
+Removed special characters using Regular Expressions
+Converted text to lowercase
+Tokenized reviews into words
+Removed stopwords using NLTK
+Applied Porter Stemming
+Built a cleaned text corpus
+
+🔤 Feature Engineering
+The cleaned text was transformed into numerical features using the Bag-of-Words approach.
+Feature Extraction
+CountVectorizer
+Maximum vocabulary size: 2500 words
+The resulting feature matrix was then scaled using MinMaxScaler before model training.
+
+🤖 Machine Learning Models
+Three supervised learning algorithms were implemented and compared.
+1. Random Forest Classifier
+Model Training
+Prediction
+Confusion Matrix
+Cross Validation
+Hyperparameter Optimization using GridSearchCV
+2. XGBoost Classifier
+Model Training
+Prediction
+Performance Evaluation
+3. Decision Tree Classifier
+Model Training
+Prediction
+Confusion Matrix
+
+⚙️ Model Evaluation
+The models were evaluated using:
+Training Accuracy
+Testing Accuracy
+Accuracy Score
+Confusion Matrix
+K-Fold Cross Validation
+GridSearchCV
+Stratified K-Fold Validation
+
+This allowed comparison of model performance and selection of the best-performing classifier.
+
+📁 Project Structure
+Amazon-Alexa-Sentiment-Analysis/
+│
+├── amazon_alexa.tsv
+├── Amazon_Alexa_Sentiment_Analysis.ipynb
+├── README.md
+├── images/
+│   ├── rating_distribution.png
+│   ├── feedback_distribution.png
+│   ├── wordcloud_positive.png
+│   ├── wordcloud_negative.png
+│   └── confusion_matrix.png
+
+🚀 Machine Learning Workflow
+Amazon Alexa Reviews
+          │
+          ▼
+Data Exploration
+          │
+          ▼
+Exploratory Data Analysis
+          │
+          ▼
+Text Cleaning
+          │
+          ▼
+Stopword Removal
+          │
+          ▼
+Stemming
+          │
+          ▼
+Bag-of-Words Vectorization
+          │
+          ▼
+Feature Scaling
+          │
+          ▼
+Train-Test Split
+          │
+          ▼
+Model Training
+(Random Forest | Decision Tree | XGBoost)
+          │
+          ▼
+Cross Validation & Hyperparameter Tuning
+          │
+          ▼
+Model Evaluation
+          │
+          ▼
+Sentiment Prediction
+
+📌 Results
+Successfully developed an end-to-end NLP pipeline for sentiment classification.
+Applied text preprocessing techniques to convert raw customer reviews into machine learning-ready features.
+Compared the performance of Random Forest, Decision Tree, and XGBoost classifiers.
+Evaluated model performance using cross-validation, confusion matrices, and hyperparameter tuning.
+Demonstrated how machine learning can be applied to automatically classify customer feedback for business intelligence and customer experience analysis.
+
+📚 Future Improvements
+Implement TF-IDF vectorization for richer text representation.
+Experiment with Word2Vec, GloVe, or FastText embeddings.
+Fine-tune transformer-based models such as BERT for higher classification accuracy.
+Address class imbalance using techniques such as SMOTE or class weighting.
+Deploy the model as a web application using Streamlit or Flask for real-time sentiment prediction.
+
+👩‍💻 Author
+Swati Lalwani
+Skills Demonstrated
+Natural Language Processing (NLP)
+Text Preprocessing
+Exploratory Data Analysis (EDA)
+Data Visualization
+Feature Engineering
+Bag-of-Words (CountVectorizer)
+Machine Learning
+Random Forest
+Decision Tree
+XGBoost
+Hyperparameter Tuning
+Cross Validation
+Sentiment Analysis
+Predictive Analytics
