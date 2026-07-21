@@ -1,1 +1,213 @@
+Netflix User Behavior & Revenue Analysis
 
+📌 Project Overview
+Understanding user behavior is essential for subscription-based streaming platforms to improve customer engagement, optimize pricing strategies, and maximize revenue. This project analyzes Netflix user demographics, subscription plans, device preferences, and monthly revenue to identify patterns that influence platform performance.
+
+Using the Netflix Userbase Dataset, this project performs comprehensive Exploratory Data Analysis (EDA), data visualization, descriptive statistics, and statistical hypothesis testing to uncover relationships between user characteristics and monthly revenue.
+
+🎯 Objectives
+Analyze Netflix user demographics and subscription patterns.
+Perform exploratory data analysis (EDA).
+Visualize user distribution across countries, devices, and subscription plans.
+Examine monthly revenue trends.
+Identify relationships between customer attributes and revenue.
+Perform statistical hypothesis testing to validate observed patterns.
+
+📊 Dataset
+
+Dataset: Netflix Userbase Dataset
+
+The dataset contains user information related to Netflix subscriptions.
+
+Features
+Age
+Gender
+Country
+Subscription Type
+Device
+Monthly Revenue
+Plan Duration (removed during preprocessing)
+User ID (removed during preprocessing)
+🛠️ Technologies Used
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+SciPy
+
+📈 Exploratory Data Analysis (EDA)
+
+The dataset was explored to understand user demographics and subscription characteristics before statistical analysis.
+
+Data Cleaning
+Removed duplicate User IDs
+Removed unnecessary columns:
+User ID
+Plan Duration
+Verified data types
+Generated descriptive statistics
+
+📊 Univariate Analysis
+
+The following variables were analyzed individually:
+
+Subscription Type
+Distribution of Basic, Standard, and Premium plans
+Count plots
+Pie charts
+Country
+User distribution across countries
+Country-wise subscription analysis
+Gender
+Gender distribution
+Comparison of male and female subscribers
+Device
+Device usage analysis
+Smartphone
+Laptop
+Tablet
+Smart TV
+Monthly Revenue
+Revenue distribution
+Histograms
+Boxplots
+Summary statistics
+
+🔍 Key Insights
+Basic subscription plans were the most common, followed closely by Standard and Premium plans.
+United States and Canada accounted for the highest proportion of users, followed by the United Kingdom.
+The dataset showed an almost equal distribution of male and female subscribers.
+Device usage was evenly distributed across smartphones, tablets, laptops, and smart TVs.
+Monthly revenue was relatively balanced, with $12/month appearing most frequently among users.
+
+📊 Bivariate Analysis
+
+Relationships between Monthly Revenue and several customer attributes were explored using:
+
+Cross-tabulation
+Stacked Bar Charts
+Boxplots
+
+Variables analyzed include:
+
+Subscription Type vs Monthly Revenue
+Country vs Monthly Revenue
+Age vs Monthly Revenue
+Gender vs Monthly Revenue
+
+These visualizations helped identify revenue patterns across different customer segments.
+
+📈 Statistical Analysis
+
+The project applies multiple statistical techniques to determine whether customer characteristics significantly influence monthly revenue.
+
+Chi-Square Test of Independence
+
+Performed between:
+
+Subscription Type vs Monthly Revenue
+Country vs Monthly Revenue
+Gender vs Monthly Revenue
+Device vs Monthly Revenue
+
+Purpose:
+
+Determine whether monthly revenue is statistically associated with categorical variables.
+Normality Testing
+
+Used:
+
+Shapiro-Wilk Test
+
+Purpose:
+
+Evaluate whether the data follows a normal distribution before selecting appropriate statistical tests.
+Homogeneity of Variance
+
+Used:
+
+Levene's Test
+
+Purpose:
+
+Verify whether groups have equal variances.
+Non-Parametric Testing
+
+Imported:
+
+Mann–Whitney U Test
+
+This test can be used when normality assumptions are violated to compare distributions between two independent groups.
+
+📁 Project Structure
+Netflix-User-Behavior-Analysis/
+│
+├── Netflix Userbase.csv
+├── Netflix_User_Analysis.ipynb
+├── README.md
+
+🚀 Analysis Workflow
+Netflix User Dataset
+          │
+          ▼
+Data Cleaning
+          │
+          ▼
+Exploratory Data Analysis
+          │
+          ▼
+Data Visualization
+          │
+          ▼
+Descriptive Statistics
+          │
+          ▼
+Bivariate Analysis
+          │
+          ▼
+Chi-Square Tests
+          │
+          ▼
+Normality Testing
+          │
+          ▼
+Variance Testing
+          │
+          ▼
+Business Insights
+
+📌 Results
+Performed comprehensive exploratory data analysis to understand Netflix user demographics and subscription behavior.
+Visualized customer distributions across subscription plans, countries, devices, and gender.
+Examined revenue patterns using descriptive statistics and comparative visualizations.
+Applied statistical hypothesis testing, including Chi-Square, Shapiro-Wilk, and Levene's tests, to evaluate relationships between customer characteristics and monthly revenue.
+Generated actionable insights into customer segmentation and revenue trends that can support data-driven business decisions.
+
+📚 Future Improvements
+Build predictive models to forecast customer churn or monthly revenue.
+Apply clustering techniques for customer segmentation.
+Develop interactive dashboards using Power BI or Tableau.
+Perform time-series analysis if subscription history becomes available.
+Incorporate additional customer engagement metrics such as watch time and viewing preferences.
+
+👩‍💻 Author
+Swati Lalwani
+Skills Demonstrated
+Exploratory Data Analysis (EDA)
+Data Cleaning
+Data Visualization
+Descriptive Statistics
+Hypothesis Testing
+Chi-Square Test of Independence
+Shapiro-Wilk Normality Test
+Levene's Test
+Cross-Tabulation Analysis
+Business Analytics
+Customer Behavior Analysis
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+SciPy
